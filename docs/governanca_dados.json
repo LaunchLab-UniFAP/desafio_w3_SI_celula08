@@ -1,16 +1,38 @@
-{ #Base para alunos de SI
-  
-  "licenca_distribuicao": "MIT",
+{
   "versao_manifesto": "1.0.0",
-  "compliance_lgpd": {
-    "anonimizacao_obrigatoria": true,
-    "politica_retencao_anos": 5,
-    "nivel_acesso_restrito": "Critico"
+  "licenca_distribuicao": {
+    "tipo": "MIT",
+    "categoria": "open-source permissiva",
+    "escopo": "codigo-fonte e documentacao do consorcio",
+    "aviso_copyright_obrigatorio": true,
+    "sem_garantia": true
   },
-  
+  "compliance_lgpd": {
+    "jurisdicao_referencia": "Brasil",
+    "norma_referencia": "Lei Geral de Protecao de Dados Pessoais (LGPD - Lei nº 13.709/2018)",
+    "nivel_compliance": "alto",
+    "validacao_juridica_obrigatoria": true,
+    "finalidade_tratamento": "monitoramento e previsao de focos de endemias urbanas",
+    "anonimizacao_obrigatoria": true,
+    "restricoes_anonimizacao": [
+      "E proibido armazenar identificadores diretos de pacientes no sistema de monitoramento.",
+      "Dados pseudonimizados devem receber os mesmos controles de dados pessoais e nao podem ser divulgados como anonimos.",
+      "E proibida qualquer tentativa de reidentificacao de pessoas a partir de dados agregados ou anonimizados.",
+      "Relatorios publicos devem usar apenas dados anonimizados e agregados."
+    ],
+    "nivel_acesso_restrito": "critico",
+    "politica_retencao_historico": {
+      "prazo_anos": 5,
+      "inicio_contagem": "encerramento da finalidade declarada para o dado",
+      "revisao_periodica": "anual",
+      "destino_apos_prazo": "eliminacao segura ou anonimização irreversivel"
+    }
+  },
   "regras_git": {
     "bloquear_push_main_direto": true,
-    "exigir_conventional_commits": true
+    "exigir_conventional_commits": true,
+    "exigir_revisao_por_pares": true,
+    "auditoria_commits_obrigatoria": true,
+    "periodicidade_auditoria": "semanal"
   }
-
 }
